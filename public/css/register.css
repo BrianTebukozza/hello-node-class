@@ -1,0 +1,20 @@
+body {
+  background-color: #f4f4f4;
+}
+
+.card {
+  max-width: 600px;
+  margin: auto;
+}
+
+.table {
+  text-align: center;
+}
+
+.btn {
+  font-size: 14px;
+}
+
+.btn i {
+  margin-right: 5px;
+}

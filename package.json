@@ -1,0 +1,29 @@
+{
+  "name": "hellonode",
+  "version": "1.0.0",
+  "description": "This is a class project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "project"
+  ],
+  "author": "brian tebukozza",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.13.0",
+    "nodemon": "^3.1.9",
+    "passport": "^0.7.0",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "prettier": "3.5.3"
+  }
+}

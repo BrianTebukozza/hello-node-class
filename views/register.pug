@@ -1,0 +1,61 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Produce Registration
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
+  link(rel='stylesheet' href='register.css')
+.container.my-5
+  .card.shadow-lg.p-4
+    h2.text-center.mb-4 Produce Registration
+    form#produceForm(action='/addProduct' method='POST' onsubmit='return validateForm()' novalidate='')
+      .mb-3
+        label.form-label(for='name') Produce Name:
+        select#name.form-select(name='name' required='')
+          option(value='') Select Produce
+          option(value='Beans') Beans
+          option(value='Grain Maize') Grain Maize
+          option(value='Cow Peas') Cow Peas
+          option(value='G-Nuts') G-Nuts
+          option(value='Soybeans') Soybeans
+        .invalid-feedback Please select a produce name.
+      .mb-3
+        label.form-label(for='type') Produce Category:
+        select#type.form-select(name='type' required='')
+          option(value='') Select Category
+          option(value='Cereals') Cereals
+          option(value='Legumes') Legumes
+          option(value='Vegetables') Vegetables
+        .invalid-feedback Please select a category.
+      .mb-3
+        label.form-label(for='quantity') Quantity Available:
+        input#quantity.form-control(type='number' name='quantity' required='' min='1')
+        .invalid-feedback Please enter a valid quantity.
+      .mb-3
+        label.form-label(for='price') Price per Unit:
+        input#price.form-control(type='number' name='price' required='' step='0.01' min='0.01')
+        .invalid-feedback Please enter a valid price.
+      .mb-3
+        label.form-label(for='expiry') Expiry Date:
+        input#expiry.form-control(type='date' name='expiry' required='')
+        .invalid-feedback Please enter an expiry date.
+      .mb-3
+        label.form-label(for='supplier_id') Supplier ID:
+        input#supplier_id.form-control(type='number' name='supplier_id' required='' min='1')
+        .invalid-feedback Please enter a valid supplier ID.
+      button.btn.btn-primary.w-100(type='submit') Register
+  .card.mt-5.p-3
+    h3.text-center Registered Items
+    table#produceTable.table.table-bordered.mt-3
+      thead.table-light
+        tr
+          th Name
+          th Category
+          th Quantity
+          th Price
+          th Expiry Date
+          th Supplier ID
+          th Actions
+      tbody
+script(src='register.js')

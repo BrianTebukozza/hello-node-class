@@ -1,0 +1,36 @@
+body {
+  background-color: #333;
+  color: white;
+}
+
+.form-container {
+  margin-top: 50px;
+  background-color: #444;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+h2,
+h3 {
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #000;
+  border-color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #555;
+  border-color: #555;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-dark {
+  background-color: #222;
+}
